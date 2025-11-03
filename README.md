@@ -60,6 +60,81 @@ Introduces **backend development with REST APIs** using Express.
 
 ---
 
+🔹 Experiment 4 – Database Integration with MongoDB
+🎯 Objective
+
+To integrate a backend API with MongoDB and perform CRUD (Create, Read, Update, Delete) operations using Express and Mongoose.
+
+🧰 Tools & Technologies
+
+Node.js
+
+Express.js
+
+MongoDB (Atlas or local)
+
+Mongoose
+
+Postman (for API testing)
+
+📂 Folder Structure
+exp4/
+├── models/
+│   └── Todo.js
+├── routes/
+│   └── todoRoutes.js
+├── server.js
+├── package.json
+├── .env
+└── README.md
+
+🚀 How to Run
+
+Open a terminal in the backend lab/exp4 folder:
+
+cd "backend lab/exp4"
+
+
+Install dependencies:
+
+npm install
+
+
+Update your .env file with MongoDB details:
+
+MONGO_URI = your_mongodb_connection_string
+PORT = 4000
+
+
+Start the server:
+
+node server.js
+
+
+✅ You’ll see:
+
+🚀 Server running on port 4000
+✅ Connected to MongoDB
+
+🧪 Test API Using Postman
+Method	Endpoint	Description	Body Example (JSON)
+POST	/api/todos	Create a new to-do item	{ "task": "Buy groceries", "completed": false }
+GET	/api/todos	Get all to-do items	—
+PUT	/api/todos/:id	Update a to-do by ID	{ "task": "Pay bills", "completed": true }
+DELETE	/api/todos/:id	Delete a to-do by ID	—
+📊 Example JSON Response
+{
+  "_id": "67279ad12f5d7d81b3b4e1c2",
+  "task": "Buy groceries",
+  "completed": false,
+  "__v": 0
+}
+
+🏁 Conclusion
+
+This experiment demonstrates how to integrate MongoDB with an Express.js backend.
+It shows how to build persistent APIs and perform CRUD operations using Mongoose.
+
 ## 🚀 How to Run This Repo Locally
 
 ### Prerequisites
