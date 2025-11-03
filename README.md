@@ -64,19 +64,6 @@ Introduces **backend development with REST APIs** using Express.
 This experiment demonstrates how to connect a Node.js Express application to MongoDB using the official mongodb driver.
 It covers CRUD (Create, Read, Update, Delete) operations for a To-Do List API.
 
-###📂 Folder Structure  
-
-exp4/
-├── models/
-│   └── Todo.js
-├── routes/
-│   └── todoRoutes.js
-├── server.js
-├── package.json
-├── .env
-└── README.md
-
-
 | File Name      | Purpose                                                               |
 | -------------- | --------------------------------------------------------------------- |
 | `server.js`    | Express server that connects to MongoDB and performs CRUD operations. |
@@ -92,16 +79,20 @@ exp4/
 
 Steps to Run:
 1) Navigate to the folder:
+   ```bash
    cd exp4
 
 
 2) Install dependencies:
+    ```bash
     npm install
 
 3) Start the server:
+   ```bash
    node server.js
    
 4) Open Postman and test endpoints like:
+   ```bash
    http://localhost:4000/api/todos
    
 5) Check your MongoDB data in MongoDB Compass under the selected database and collection.
@@ -122,10 +113,6 @@ Steps to Run:
 | **DELETE** | `/api/todos/:id` | Delete a to-do by ID    | —                                                 |
 
 
-🏁 Conclusion
-
-This experiment demonstrates how to integrate MongoDB with an Express.js backend.
-It shows how to build persistent APIs and perform CRUD operations using Mongoose.
 
 ## 🚀 How to Run This Repo Locally
 
