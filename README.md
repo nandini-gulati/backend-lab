@@ -59,7 +59,7 @@ Introduces **backend development with REST APIs** using Express.
 
 ---
 
-###🔹 Experiment 4 – Connecting Express with MongoDB
+### 🔹 Experiment 4 – Connecting Express with MongoDB
 
 This experiment demonstrates how to connect a Node.js Express application to MongoDB using the official mongodb driver.
 It covers CRUD (Create, Read, Update, Delete) operations for a To-Do List API.
@@ -113,7 +113,7 @@ Steps to Run:
 | **DELETE** | `/api/todos/:id` | Delete a to-do by ID    | —                                                 |
 ---
 
-###🔹 Experiment 5 – MongoDB with Mongoose (ODM Operations)
+### 🔹 Experiment 5 – MongoDB with Mongoose (ODM Operations)
 
 This experiment introduces Mongoose, an ODM (Object Data Modeling) library for MongoDB.
 It enhances database interaction with schema validation, pagination, virtuals, indexing, and triggers.
@@ -124,19 +124,19 @@ It enhances database interaction with schema validation, pagination, virtuals, i
 | `models/Todo.js` | Mongoose schema with validation, indexes, and virtual fields. |
 | `package.json`   | Contains dependencies for Express and Mongoose.               |
 
----
-Features:
+
+## Features:
 
 - Pagination using query params (?page=1&limit=5)
 - Pre-save hooks (triggers)
 - Virtual fields for computed values
 - Indexing for optimized queries
 
-###Steps to Run:
+### Steps to Run:
 
 1) Navigate to the folder:
    ```bash
-   cd exp4
+   cd exp5
 
 
 2) Install dependencies:
@@ -154,6 +154,60 @@ Features:
    
 5) Check MongoDB Compass → Database: `todoDB` → Collection: `todos`.
 
+
+---
+
+### 🔹 Experiment 6 – Middleware & Advanced Routing in Express
+
+This experiment focuses on middleware functions and advanced routing techniques in Express.
+You’ll implement logging, error handling, and nested/dynamic routes.
+
+| File Name                    | Purpose                                                           |
+| ---------------------------- | ----------------------------------------------------------------- |
+| `server.js`                  | Main Express app using middleware for logging and error handling. |
+| `routes/todos.js`            | Contains To-Do routes (GET, POST, PUT, DELETE).                   |
+| `middleware/logger.js`       | Custom middleware to log every request.                           |
+| `middleware/errorHandler.js` | Centralized error-handling middleware.                            |
+| `package.json`               | Project setup with Express dependency.                            |
+
+## Features:
+
+1) Custom request logger middleware
+
+2) Centralized error handling
+
+3) Dynamic routes (e.g. `/api/todos/:id` )
+
+4) Modular routing with `express.Router()`
+
+### Steps to Run:
+
+1) Navigate to the folder:
+   ```bash
+   cd exp6
+
+
+2) Install dependencies:
+    ```bash
+    npm install
+
+3) Start the server:
+   ```bash
+   node server.js
+
+4) Open Postman and test routes:
+   `GET /api/todos`
+   `POST /api/todos`
+   `PUT /api/todos/:id`
+   `DELETE /api/todos/:id`
+
+5) Check console logs for middleware output:
+   ```bash
+   [2025-11-03T18:30:00Z] GET /api/todos
+
+   
+---
+   
    
 ## 🚀 How to Run This Repo Locally
 
