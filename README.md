@@ -111,9 +111,50 @@ Steps to Run:
 | **GET**    | `/api/todos`     | Get all to-do items     | —                                                 |
 | **PUT**    | `/api/todos/:id` | Update a to-do by ID    | `{ "task": "Pay bills", "completed": true }`      |
 | **DELETE** | `/api/todos/:id` | Delete a to-do by ID    | —                                                 |
+---
+
+###🔹 Experiment 5 – MongoDB with Mongoose (ODM Operations)
+
+This experiment introduces Mongoose, an ODM (Object Data Modeling) library for MongoDB.
+It enhances database interaction with schema validation, pagination, virtuals, indexing, and triggers.
+
+| File Name        | Purpose                                                       |
+| ---------------- | ------------------------------------------------------------- |
+| `server.js`      | Express server using Mongoose for MongoDB operations.         |
+| `models/Todo.js` | Mongoose schema with validation, indexes, and virtual fields. |
+| `package.json`   | Contains dependencies for Express and Mongoose.               |
+
+---
+Features:
+
+- Pagination using query params (?page=1&limit=5)
+- Pre-save hooks (triggers)
+- Virtual fields for computed values
+- Indexing for optimized queries
+
+###Steps to Run:
+
+1) Navigate to the folder:
+   ```bash
+   cd exp4
 
 
+2) Install dependencies:
+    ```bash
+    npm install
 
+3) Start the server:
+   ```bash
+   node server.js
+   
+4) Open Postman and test routes:
+
+`GET /api/todos?page=1&limit=5`
+`POST /api/todos` (add task)
+   
+5) Check MongoDB Compass → Database: `todoDB` → Collection: `todos`.
+
+   
 ## 🚀 How to Run This Repo Locally
 
 ### Prerequisites
