@@ -68,13 +68,9 @@ To integrate a backend API with MongoDB and perform CRUD (Create, Read, Update, 
 🧰 Tools & Technologies
 
 Node.js
-
 Express.js
-
 MongoDB (Atlas or local)
-
 Mongoose
-
 Postman (for API testing)
 
 📂 Folder Structure
@@ -88,7 +84,7 @@ exp4/
 ├── .env
 └── README.md
 
-🚀 How to Run
+#🚀 How to Run
 
 Open a terminal in the backend lab/exp4 folder:
 
@@ -122,13 +118,6 @@ POST	/api/todos	Create a new to-do item	{ "task": "Buy groceries", "completed": 
 GET	/api/todos	Get all to-do items	—
 PUT	/api/todos/:id	Update a to-do by ID	{ "task": "Pay bills", "completed": true }
 DELETE	/api/todos/:id	Delete a to-do by ID	—
-📊 Example JSON Response
-{
-  "_id": "67279ad12f5d7d81b3b4e1c2",
-  "task": "Buy groceries",
-  "completed": false,
-  "__v": 0
-}
 
 🏁 Conclusion
 
