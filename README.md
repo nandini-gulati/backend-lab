@@ -23,7 +23,6 @@ Covers the basics of Node.js modules, HTTP servers, and file handling.
 | `simpleServer.js`  | Basic HTTP server with request-response. |
 | `readFileAsync.js` | Reading files asynchronously with error handling. |
 | `textFileServer.js`| Serving a text file over HTTP with `fs` and `http`. |
-| `example.txt`      | Sample file served by server code. |
 
 ---
 
@@ -61,28 +60,17 @@ Introduces **backend development with REST APIs** using Express.
 ---
 
 🔹 Experiment 4 – Database Integration with MongoDB
-🎯 Objective
 
 To integrate a backend API with MongoDB and perform CRUD (Create, Read, Update, Delete) operations using Express and Mongoose.
 
 🧰 Tools & Technologies
 
-Node.js
-Express.js
-MongoDB (Atlas or local)
-Mongoose
-Postman (for API testing)
+-Node.js
+-Express.js
+-MongoDB (Atlas or local)
+-Mongoose
+-Postman (for API testing)
 
-📂 Folder Structure
-exp4/
-├── models/
-│   └── Todo.js
-├── routes/
-│   └── todoRoutes.js
-├── server.js
-├── package.json
-├── .env
-└── README.md
 
 #🚀 How to Run
 
@@ -113,11 +101,11 @@ node server.js
 ✅ Connected to MongoDB
 
 🧪 Test API Using Postman
-Method	Endpoint	Description	Body Example (JSON)
-POST	/api/todos	Create a new to-do item	{ "task": "Buy groceries", "completed": false }
-GET	/api/todos	Get all to-do items	—
-PUT	/api/todos/:id	Update a to-do by ID	{ "task": "Pay bills", "completed": true }
-DELETE	/api/todos/:id	Delete a to-do by ID	—
+|Method|	Endpoint	Description|	Body Example (JSON)|
+|POST |	/api/todos	|Create a new to-do item	{ "task": "Buy groceries", "completed": false }|
+|GET	|/api/todos|	Get all to-do items	—|
+|PUT	|/api/todos/:id|	Update a to-do by ID	{ "task": "Pay bills", "completed": true }|
+|DELETE|	/api/todos/:id	|Delete a to-do by ID	—|
 
 🏁 Conclusion
 
