@@ -59,40 +59,53 @@ Introduces **backend development with REST APIs** using Express.
 
 ---
 
-🔹 Experiment 4 – Database Integration with MongoDB
+###🔹 Experiment 4 – Connecting Express with MongoDB
 
-To integrate a backend API with MongoDB and perform CRUD (Create, Read, Update, Delete) operations using Express and Mongoose.
+This experiment demonstrates how to connect a Node.js Express application to MongoDB using the official mongodb driver.
+It covers CRUD (Create, Read, Update, Delete) operations for a To-Do List API.
 
-🧰 Tools & Technologies
+###📂 Folder Structure  
 
--Node.js
--Express.js
--MongoDB (Atlas or local)
--Mongoose
--Postman (for API testing)
-
-
-#🚀 How to Run
-
-Open a terminal in the backend lab/exp4 folder:
-
-cd "backend lab/exp4"
+exp4/
+├── models/
+│   └── Todo.js
+├── routes/
+│   └── todoRoutes.js
+├── server.js
+├── package.json
+├── .env
+└── README.md
 
 
-Install dependencies:
-
-npm install
-
-
-Update your .env file with MongoDB details:
-
-MONGO_URI = your_mongodb_connection_string
-PORT = 4000
+| File Name      | Purpose                                                               |
+| -------------- | --------------------------------------------------------------------- |
+| `server.js`    | Express server that connects to MongoDB and performs CRUD operations. |
+| `package.json` | Contains dependencies for MongoDB and Express.                        |
 
 
-Start the server:
+#### Endpoints:
+- `GET /todos` → Fetch all todos  
+- `GET /todos/:id` → Fetch todo by ID  
+- `POST /todos` → Add a new todo  
+- `PUT /todos/:id` → Update a todo  
+- `DELETE /todos/:id` → Delete a todo  
 
-node server.js
+Steps to Run:
+1) Navigate to the folder:
+   cd exp4
+
+
+2) Install dependencies:
+    npm install
+
+3) Start the server:
+   node server.js
+   
+4) Open Postman and test endpoints like:
+   http://localhost:4000/api/todos
+   
+5) Check your MongoDB data in MongoDB Compass under the selected database and collection.
+
 
 
 ✅ You’ll see:
@@ -101,11 +114,13 @@ node server.js
 ✅ Connected to MongoDB
 
 🧪 Test API Using Postman
-|Method|	Endpoint	Description|	Body Example (JSON)|
-|POST |	/api/todos	|Create a new to-do item	{ "task": "Buy groceries", "completed": false }|
-|GET	|/api/todos|	Get all to-do items	—|
-|PUT	|/api/todos/:id|	Update a to-do by ID	{ "task": "Pay bills", "completed": true }|
-|DELETE|	/api/todos/:id	|Delete a to-do by ID	—|
+| Method     | Endpoint         | Description             | Body Example (JSON)                               |
+| ---------- | ---------------- | ----------------------- | ------------------------------------------------- |
+| **POST**   | `/api/todos`     | Create a new to-do item | `{ "task": "Buy groceries", "completed": false }` |
+| **GET**    | `/api/todos`     | Get all to-do items     | —                                                 |
+| **PUT**    | `/api/todos/:id` | Update a to-do by ID    | `{ "task": "Pay bills", "completed": true }`      |
+| **DELETE** | `/api/todos/:id` | Delete a to-do by ID    | —                                                 |
+
 
 🏁 Conclusion
 
