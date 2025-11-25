@@ -65,11 +65,6 @@ Covers HTTP methods: **GET, POST, PUT, DELETE** and implements a simple To-Do Li
 </details>
 
 
-### 🔹 Experiment 4 – Connecting Express with MongoDB
-
-This experiment demonstrates how to connect a Node.js Express application to MongoDB using the official mongodb driver.
-It covers CRUD (Create, Read, Update, Delete) operations for a To-Do List API.
-
 <details>
 <summary>🔹 Experiment 4 – Connecting Express with MongoDB</summary>
 
@@ -120,7 +115,7 @@ Enhances MongoDB operations using **Mongoose ODM**, including pagination, virtua
 Steps to Run:
 1) Navigate to the folder:
    ```bash
-   cd exp4
+   cd exp5
 
 | Method     | Endpoint         | Description             | Body Example (JSON)                               |
 | ---------- | ---------------- | ----------------------- | ------------------------------------------------- |
@@ -133,21 +128,6 @@ Steps to Run:
 
 <details>
 <summary>🔹 Experiment 6 – Middleware & Advanced Routing in Express</summary>
-
-
-2) Install dependencies:
-    ```bash
-    npm install
-
-3) Start the server:
-   ```bash
-   node server.js
-   
-4) Open Postman and test endpoints like:
-   ```bash
-   http://localhost:4000/api/todos
-   
-5) Check your MongoDB data in MongoDB Compass under the selected database and collection.
 
 Focuses on middleware functions and advanced routing techniques in Express.
 
@@ -165,6 +145,26 @@ Focuses on middleware functions and advanced routing techniques in Express.
 2. Centralized error handling  
 3. Dynamic routes (e.g. `/api/todos/:id`)  
 4. Modular routing with `express.Router()`
+
+### Steps to Run:
+1) Navigate to the folder:
+   ```bash
+   cd exp6
+   
+2) Install dependencies:
+    ```bash
+    npm install
+
+3) Start the server:
+   ```bash
+   node server.js
+   
+4) Open Postman and test endpoints like:
+   ```bash
+   http://localhost:4000/api/todos
+   
+5) Check your MongoDB data in MongoDB Compass under the selected database and collection.
+
 
 
 </details>
@@ -190,130 +190,9 @@ This experiment introduces **unit testing, integration testing, and debugging** 
 | **GET**    | `/api/todos`     | Get all to-do items     | —                                                 |
 | **PUT**    | `/api/todos/:id` | Update a to-do by ID    | `{ "task": "Pay bills", "completed": true }`      |
 | **DELETE** | `/api/todos/:id` | Delete a to-do by ID    | —                                                 |
----
-
-### 🔹 Experiment 5 – MongoDB with Mongoose (ODM Operations)
-
-This experiment introduces Mongoose, an ODM (Object Data Modeling) library for MongoDB.
-It enhances database interaction with schema validation, pagination, virtuals, indexing, and triggers.
-
-| File Name        | Purpose                                                       |
-| ---------------- | ------------------------------------------------------------- |
-| `server.js`      | Express server using Mongoose for MongoDB operations.         |
-| `models/Todo.js` | Mongoose schema with validation, indexes, and virtual fields. |
-| `package.json`   | Contains dependencies for Express and Mongoose.               |
 
 
-## Features:
 
-- Pagination using query params (?page=1&limit=5)
-- Pre-save hooks (triggers)
-- Virtual fields for computed values
-- Indexing for optimized queries
-
-### Steps to Run:
-
-1) Navigate to the folder:
-   ```bash
-   cd exp5
-
-
-2) Install dependencies:
-    ```bash
-    npm install
-
-3) Start the server:
-   ```bash
-   node server.js
-   
-4) Open Postman and test routes:
-
-`GET /api/todos?page=1&limit=5`
-`POST /api/todos` (add task)
-   
-5) Check MongoDB Compass → Database: `todoDB` → Collection: `todos`.
-
-
----
-
-### 🔹 Experiment 6 – Middleware & Advanced Routing in Express
-
-This experiment focuses on middleware functions and advanced routing techniques in Express.
-You’ll implement logging, error handling, and nested/dynamic routes.
-
-| File Name                    | Purpose                                                           |
-| ---------------------------- | ----------------------------------------------------------------- |
-| `server.js`                  | Main Express app using middleware for logging and error handling. |
-| `routes/todos.js`            | Contains To-Do routes (GET, POST, PUT, DELETE).                   |
-| `middleware/logger.js`       | Custom middleware to log every request.                           |
-| `middleware/errorHandler.js` | Centralized error-handling middleware.                            |
-| `package.json`               | Project setup with Express dependency.                            |
-
-## Features:
-
-1) Custom request logger middleware
-
-2) Centralized error handling
-
-3) Dynamic routes (e.g. `/api/todos/:id` )
-
-4) Modular routing with `express.Router()`
-
-### Steps to Run:
-
-1) Navigate to the folder:
-   ```bash
-   cd exp6
-
-
-2) Install dependencies:
-    ```bash
-    npm install
-
-3) Start the server:
-   ```bash
-   node server.js
-
-4) Open Postman and test routes:
-   `GET /api/todos`
-   `POST /api/todos`
-   `PUT /api/todos/:id`
-   `DELETE /api/todos/:id`
-
-5) Check console logs for middleware output
-
-   
----
-   
-   
-## 🚀 How to Run This Repo Locally
-=======
-#### Files:
-| File Name            | Purpose |
-|----------------------|---------|
-| `server.js`          | Express app with exported `app` for testing. |
-| `tests/todo.test.js` | Jest and Supertest tests for To-Do API endpoints. |
-| `package.json`       | Project setup with scripts for testing and dependencies. |
-
-#### Features:
-- Unit tests for POST/GET endpoints  
-- Integration tests for API routes  
-- Debugging via console and Jest output  
-
-#### Steps to Run:
-1) Navigate to the folder:
-   ```bash
-   cd exp7
-
-
-2) Install dependencies:
-    ```bash
-    npm install express mongoose dotenv
-    npm install --save-dev jest supertest
-
-3) Run the tests:
-   ```bash
-   npm test
 
 </details>
 
