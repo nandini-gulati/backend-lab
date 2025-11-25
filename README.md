@@ -129,7 +129,7 @@ Steps to Run:
 | **GET**    | `/api/todos?page=1&limit=5` | Get paginated todos | —                                                 |
 
 </details>
->>>>>>> 01b3d54 (Update Experiment 7 and 8 with complete README and code)
+
 
 <details>
 <summary>🔹 Experiment 6 – Middleware & Advanced Routing in Express</summary>
@@ -280,9 +280,7 @@ You’ll implement logging, error handling, and nested/dynamic routes.
    `PUT /api/todos/:id`
    `DELETE /api/todos/:id`
 
-5) Check console logs for middleware output:
-   ```bash
-   [2025-11-03T18:30:00Z] GET /api/todos
+5) Check console logs for middleware output
 
    
 ---
@@ -304,18 +302,18 @@ You’ll implement logging, error handling, and nested/dynamic routes.
 
 #### Steps to Run:
 1) Navigate to the folder:
-```bash
-cd exp7
+   ```bash
+   cd exp7
+
 
 2) Install dependencies:
-```bash
-npm install express mongoose dotenv
-npm install --save-dev jest supertest
-
+    ```bash
+    npm install express mongoose dotenv
+    npm install --save-dev jest supertest
 
 3) Run the tests:
-```bash
-npm test
+   ```bash
+   npm test
 
 </details>
 
@@ -356,11 +354,13 @@ This experiment adds **input validation** and **error handling** to the To-Do AP
 
 #### Steps to Run:
 1) Navigate to the folder:
-```bash
-cd exp8
+   ```bash
+   cd exp8
+
 
 2) Install dependencies:
-```bash
-npm install express mongoose dotenv joi express-validator
+    ```bash
+    npm install express mongoose dotenv joi express-validator
+
 
 </details>
