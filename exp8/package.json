@@ -1,0 +1,25 @@
+{
+  "name": "exp8",
+  "version": "1.0.0",
+  "description": "Experiment 8: To-do API with validation and error handling",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --forceExit"
+  },
+  "keywords": [],
+  "author": "Nandini Gulati",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-validator": "^7.0.1",
+    "joi": "^18.0.2",
+    "mongoose": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
+  }
+}

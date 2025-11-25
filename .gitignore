@@ -1,2 +1,11 @@
+# macOS system files
 .DS_Store
-.DS_Store
+
+# Node modules in any subfolder
+**/node_modules/
+
+# Optional: log files
+*.log
+
+# Optional: environment files
+.env
